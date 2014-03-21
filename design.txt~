@@ -1,0 +1,117 @@
+Issues:
+1) free list or disk status map (botth or any one) : any one
+2) allocate disk blocks to a proc???
+3) sim disk mein what to store : there can be other things apart from file system
+
+- protection/ permission.
+
+- cache, buffer
+
+- store the sim disk, so that it remains even after pranali shut down
+-------------------------------------------------------------
+
+File:
+	collection of blocks. start block , links to next block, last block has next = null.
+	
+Where is the start block of a file stored?  - in disk.	
+
+
+--------------------------------------------------------------
+
+Directory:
+	is a file which stores info abt files/ direct's inside it (permissions, ......) ??????
+	
+	
+--------------------------------------------------------------
+
+accessing a file ?( read/ write ) how??	
+
+--------------------------------------------------------------
+sim disk:
+	- partition for file system
+		- metadata ?
+		- actual data
+
+----------------------------------------------------------------
+Theme B groups: Formation of the superblock (or equivalent), formation of disk status map, Creation of free list, Creation of directory entries, Creation of file map table (or equivalent), allocation of disk blocks to process. (The list may be corrected or agumented as necessary.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- 
+
+
+--------------------------------------------------------------------
+Metadata
+- root directory ptr
+- start of data partition ptr
+- disk status map (fixed size coz num blocks in disk fixed)/ free list (dsm for now)
+
+
+- Directory : only in metadata, 1 block per dir ( what if more than 1 block needed : chaining (by a next ptr) 
+	- dir name
+	-permission
+	- children dir list ( name & starting block nos : csv)
+	- file map ( file name, start block no in metadata)
+	- (last 4 B) ptr to next block (if chaining reqd , else null) 
+
+-File :
+	-name, size, startblock (in data) , permission , current/last block, offest in curr block 
+-----------------------	
+Data
+
+-File : 
+	- implement using chaining (at the end of block , we have ptr to next block of file (fixed size : say 4B), if last block, NULL)
+	- data to be wriiten in file
+	
+-------------------------------------------------------------------------	
+		
+Allocation of blocks:
+
+1) function :  get_free_blocks ( number of free blocks needed, current block number used)
+	This will access the DSM and find "number of free blocks needed" number of free blocks, set them to used in DSM,
+	and chian the actual blocks from the end of the current block.  
+	Assume we know how much is to be written(while writing to list).
+	
+	
+	
+--------------------------------------------------------------------------
+
+buffers : 
+
+
+----------------------------------------------------------------------------
+
+saving sim disk to disk of host os : 	
+	
