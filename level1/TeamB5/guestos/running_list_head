@@ -1,0 +1,192 @@
+aclocal.m4:275:       ${MAKE-make} -s -f confmf > /dev/null 2>&1; then
+aclocal.m4:483:AM_MISSING_PROG(AUTOMAKE, automake-${am__api_version})
+aclocal.m4:604:[am_make=${MAKE-make}
+autom4te.cache/output.0:2663:{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether ${MAKE-make} sets \$(MAKE)" >&5
+autom4te.cache/output.0:2664:$as_echo_n "checking whether ${MAKE-make} sets \$(MAKE)... " >&6; }
+autom4te.cache/output.0:2665:set x ${MAKE-make}
+autom4te.cache/output.0:2676:case `${MAKE-make} -f conftest.make 2>/dev/null` in
+autom4te.cache/output.0:2691:  SET_MAKE="MAKE=${MAKE-make}"
+autom4te.cache/output.0:2745:AUTOMAKE=${AUTOMAKE-"${am_missing_run}automake-${am__api_version}"}
+autom4te.cache/output.0:3559:am_make=${MAKE-make}
+autom4te.cache/output.0:3706:       ${MAKE-make} -s -f confmf > /dev/null 2>&1; then
+autom4te.cache/output.0:4090:       ${MAKE-make} -s -f confmf > /dev/null 2>&1; then
+ChangeLog:183:	* m2skernel.h: variable 'ke->context_max' added, to track the number
+ChangeLog:595:		ke->context_reschedule
+ChangeLog:691:		checks of 'ke_timer' in the main simulation loop. Variable 'ke->process_suspended_time'
+config.log:766:AUTOMAKE='${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11'
+config.status:662:S["AUTOMAKE"]="${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11"
+configure:2663:{ $as_echo "$as_me:${as_lineno-$LINENO}: checking whether ${MAKE-make} sets \$(MAKE)" >&5
+configure:2664:$as_echo_n "checking whether ${MAKE-make} sets \$(MAKE)... " >&6; }
+configure:2665:set x ${MAKE-make}
+configure:2676:case `${MAKE-make} -f conftest.make 2>/dev/null` in
+configure:2691:  SET_MAKE="MAKE=${MAKE-make}"
+configure:2745:AUTOMAKE=${AUTOMAKE-"${am_missing_run}automake-${am__api_version}"}
+configure:3559:am_make=${MAKE-make}
+configure:3706:       ${MAKE-make} -s -f confmf > /dev/null 2>&1; then
+configure:4090:       ${MAKE-make} -s -f confmf > /dev/null 2>&1; then
+Makefile:104:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/sched.c:41:	assert(ke->alloc_count <= p_cpus);
+src/sched.c:44:	if (ke->alloc_count == p_cpus)
+src/sched.c:72:	assert(ke->alloc_count < p_cpus);
+src/sched.c:151:	assert(ke->alloc_count <= ke->context_count);
+src/sched.c:152:	if (ke->alloc_count == ke->context_count)
+src/sched.c:156:	for (ctx = ke->context_list_head; ctx; ctx = ctx->context_next) {
+src/sched.c:184:	for (ctx = ke->alloc_list_head; ctx; ctx = ctx->alloc_next)
+src/sched.c:190:	if (ke->alloc_count == ke->running_count) {
+src/sched.c:192:		for (ctx = ke->alloc_list_head; ctx; ctx = ctx->alloc_next)
+src/sched.c:201:		for (ctx = ke->alloc_list_head; ctx; ctx = ctx->alloc_next)
+src/sched.c:209:	while (ke->alloc_count < ke->running_count && ke->alloc_count < p_cpus) {
+src/sched.c:213:		for (ctx = ke->running_list_head; ctx; ctx = ctx->running_next)
+src/sched.c:228:	for (ctx = ke->alloc_list_head; ctx; ctx = ctx->alloc_next)
+src/libcachesystem/Makefile:91:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/m2s-fast.c:169:		if (break_point && ke->context_list_head->regs->eip == break_point) {
+src/m2s-fast.c:170:			regs_dump(ke->context_list_head->regs, stdout);
+src/m2s-fast.c:176:		sim_inst += ke->running_count;
+src/m2s-fast.c:177:		if (!ke->context_list_head)
+src/m2s-fast.c:220:		ke->running_max);
+src/libstruct/Makefile:92:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/libm2skernel/m2skernel.c~:43:	ke->current_pid = 1000;  /* Initial assigned pid */
+src/libm2skernel/m2skernel.c~:46:	pthread_mutex_init(&ke->process_events_mutex, NULL);
+src/libm2skernel/m2skernel.c~:70:	for (ctx = ke->context_list_head; ctx; ctx = ctx->context_next)
+src/libm2skernel/m2skernel.c~:75:	while (ke->context_list_head)
+src/libm2skernel/m2skernel.c~:76:		ctx_free(ke->context_list_head);
+src/libm2skernel/m2skernel.c~:94:	for (ctx = ke->running_list_head; ctx; ctx = ctx->running_next) {
+src/libm2skernel/m2skernel.c~:109:				ctx = ke->running_list_head;
+src/libm2skernel/m2skernel.c~:114:			// ctx = ke->running_list_head and start again
+src/libm2skernel/m2skernel.c~:121:			//if (ctx!=ke->running_list_head)			// here if the ctx is not at the top of the instr, then break from this loop and run for next process
+src/libm2skernel/m2skernel.c~:127:	while (ke->finished_list_head)
+src/libm2skernel/m2skernel.c~:128:		ctx_free(ke->finished_list_head);
+src/libm2skernel/m2skernel.c~:144:	ctx = ke->context_list_head;
+src/libm2skernel/m2skernel.c~:157:	ctx->name##_next = ke->name##_list_head; \
+src/libm2skernel/m2skernel.c~:159:	ke->name##_list_head = ctx; \
+src/libm2skernel/m2skernel.c~:160:	if (!ke->name##_list_tail) ke->name##_list_tail = ctx; \
+src/libm2skernel/m2skernel.c~:161:	ke->name##_count++; \
+src/libm2skernel/m2skernel.c~:162:	ke->name##_max = MAX(ke->name##_max, ke->name##_count); }
+src/libm2skernel/m2skernel.c~:166:	ctx->name##_prev = ke->name##_list_tail; \
+src/libm2skernel/m2skernel.c~:168:	ke->name##_list_tail = ctx; \
+src/libm2skernel/m2skernel.c~:169:	if (!ke->name##_list_head) ke->name##_list_head = ctx; \
+src/libm2skernel/m2skernel.c~:170:	ke->name##_count++; }
+src/libm2skernel/m2skernel.c~:173:	if (ctx == ke->name##_list_head) ke->name##_list_head = ke->name##_list_head->name##_next; \
+src/libm2skernel/m2skernel.c~:174:	if (ctx == ke->name##_list_tail) ke->name##_list_tail = ke->name##_list_tail->name##_prev; \
+src/libm2skernel/m2skernel.c~:178:	ke->name##_count--; }
+src/libm2skernel/m2skernel.c~:181:	(ke->name##_list_head == ctx || ctx->name##_prev || ctx->name##_next)
+src/libm2skernel/m2skernel.c~:257:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c~:258:	ke->process_events_force = 1;
+src/libm2skernel/m2skernel.c~:259:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c~:351:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c~:352:	ke->process_events_force = 1;
+src/libm2skernel/m2skernel.c~:354:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c~:382:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c~:383:	ke->process_events_force = 1;
+src/libm2skernel/m2skernel.c~:385:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c~:392: * The list is only processed if flag 'ke->process_events_force' is set. */
+src/libm2skernel/m2skernel.c~:399:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c~:400:	if (!ke->process_events_force) {
+src/libm2skernel/m2skernel.c~:401:		pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c~:406:	ke->process_events_force = 0;
+src/libm2skernel/m2skernel.c~:413:	for (ctx = ke->suspended_list_head; ctx; ctx = next) {
+src/libm2skernel/m2skernel.c~:706:	for (ctx = ke->context_list_head; ctx; ctx = ctx->context_next)
+src/libm2skernel/m2skernel.c~:729:			ke->process_events_force = 1;
+src/libm2skernel/m2skernel.c~:761:	for (ctx = ke->running_list_head; ctx; ctx = ctx->running_next)
+src/libm2skernel/m2skernel.c~:768:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c:43:	ke->current_pid = 1000;  /* Initial assigned pid */
+src/libm2skernel/m2skernel.c:46:	pthread_mutex_init(&ke->process_events_mutex, NULL);
+src/libm2skernel/m2skernel.c:70:	for (ctx = ke->context_list_head; ctx; ctx = ctx->context_next)
+src/libm2skernel/m2skernel.c:75:	while (ke->context_list_head)
+src/libm2skernel/m2skernel.c:76:		ctx_free(ke->context_list_head);
+src/libm2skernel/m2skernel.c:94:	for (ctx = ke->running_list_head; ctx; ctx = ctx->running_next) {
+src/libm2skernel/m2skernel.c:109:				ctx = ke->running_list_head;
+src/libm2skernel/m2skernel.c:114:			// ctx = ke->running_list_head and start again
+src/libm2skernel/m2skernel.c:121:			//if (ctx!=ke->running_list_head)			// here if the ctx is not at the top of the instr, then break from this loop and run for next process
+src/libm2skernel/m2skernel.c:127:	while (ke->finished_list_head)
+src/libm2skernel/m2skernel.c:128:		ctx_free(ke->finished_list_head);
+src/libm2skernel/m2skernel.c:144:	ctx = ke->context_list_head;
+src/libm2skernel/m2skernel.c:157:	ctx->name##_next = ke->name##_list_head; \
+src/libm2skernel/m2skernel.c:159:	ke->name##_list_head = ctx; \
+src/libm2skernel/m2skernel.c:160:	if (!ke->name##_list_tail) ke->name##_list_tail = ctx; \
+src/libm2skernel/m2skernel.c:161:	ke->name##_count++; \
+src/libm2skernel/m2skernel.c:162:	ke->name##_max = MAX(ke->name##_max, ke->name##_count); }
+src/libm2skernel/m2skernel.c:166:	ctx->name##_prev = ke->name##_list_tail; \
+src/libm2skernel/m2skernel.c:168:	ke->name##_list_tail = ctx; \
+src/libm2skernel/m2skernel.c:169:	if (!ke->name##_list_head) ke->name##_list_head = ctx; \
+src/libm2skernel/m2skernel.c:170:	ke->name##_count++; }
+src/libm2skernel/m2skernel.c:173:	if (ctx == ke->name##_list_head) ke->name##_list_head = ke->name##_list_head->name##_next; \
+src/libm2skernel/m2skernel.c:174:	if (ctx == ke->name##_list_tail) ke->name##_list_tail = ke->name##_list_tail->name##_prev; \
+src/libm2skernel/m2skernel.c:178:	ke->name##_count--; }
+src/libm2skernel/m2skernel.c:181:	(ke->name##_list_head == ctx || ctx->name##_prev || ctx->name##_next)
+src/libm2skernel/m2skernel.c:257:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c:258:	ke->process_events_force = 1;
+src/libm2skernel/m2skernel.c:259:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c:351:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c:352:	ke->process_events_force = 1;
+src/libm2skernel/m2skernel.c:354:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c:382:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c:383:	ke->process_events_force = 1;
+src/libm2skernel/m2skernel.c:385:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c:392: * The list is only processed if flag 'ke->process_events_force' is set. */
+src/libm2skernel/m2skernel.c:399:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c:400:	if (!ke->process_events_force) {
+src/libm2skernel/m2skernel.c:401:		pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/m2skernel.c:406:	ke->process_events_force = 0;
+src/libm2skernel/m2skernel.c:413:	for (ctx = ke->suspended_list_head; ctx; ctx = next) {
+src/libm2skernel/m2skernel.c:706:	for (ctx = ke->context_list_head; ctx; ctx = ctx->context_next)
+src/libm2skernel/m2skernel.c:729:			ke->process_events_force = 1;
+src/libm2skernel/m2skernel.c:761:	for (ctx = ke->running_list_head; ctx; ctx = ctx->running_next)
+src/libm2skernel/m2skernel.c:768:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/context.c:54:	ctx->pid = ke->current_pid++;					//setting pid of the process
+src/libm2skernel/context.c:81:	ctx->mid = ke->current_mid++;
+src/libm2skernel/context.c:273:		ke->context_reschedule = 1;
+src/libm2skernel/context.c:329:	ctx = ke->context_list_head;
+src/libm2skernel/context.c:343:	for (ctx = ke->zombie_list_head; ctx; ctx = ctx->zombie_next) {
+src/libm2skernel/context.c:363:		ke->process_events_force = 1;
+src/libm2skernel/context.c:369:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/context.c:371:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/context.c:385:		ke->process_events_force = 1;
+src/libm2skernel/context.c:391:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/context.c:393:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/context.c:414:	for (aux = ke->context_list_head; aux; aux = aux->context_next) {
+src/libm2skernel/context.c:450:	for (aux = ke->context_list_head; aux; aux = aux->context_next) {
+src/libm2skernel/context.c:495:		for (ctx = ke->suspended_list_head; ctx; ctx = ctx->suspended_next) {
+src/libm2skernel/syscall.c:3436:                        isa_ctx->wakeup_futex_sleep = ++ke->futex_sleep_count;
+src/libm2skernel/syscall.c:3471:                        for (ctx = ke->suspended_list_head; ctx; ctx = ctx->suspended_next) {
+src/libm2skernel/m2skernel.h:499:	 * It should be accessed safely by locking global mutex 'ke->process_events_mutex'. */
+src/libm2skernel/m2skernel.h:519:	uint64_t wakeup_futex_sleep;  /* Assignment from ke->futex_sleep_count */
+src/libm2skernel/Makefile:95:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/libm2skernel/context.c~:54:	ctx->pid = ke->current_pid++;					//setting pid of the process
+src/libm2skernel/context.c~:81:	ctx->mid = ke->current_mid++;
+src/libm2skernel/context.c~:273:		ke->context_reschedule = 1;
+src/libm2skernel/context.c~:329:	ctx = ke->context_list_head;
+src/libm2skernel/context.c~:343:	for (ctx = ke->zombie_list_head; ctx; ctx = ctx->zombie_next) {
+src/libm2skernel/context.c~:363:		ke->process_events_force = 1;
+src/libm2skernel/context.c~:369:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/context.c~:371:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/context.c~:385:		ke->process_events_force = 1;
+src/libm2skernel/context.c~:391:	pthread_mutex_lock(&ke->process_events_mutex);
+src/libm2skernel/context.c~:393:	pthread_mutex_unlock(&ke->process_events_mutex);
+src/libm2skernel/context.c~:414:	for (aux = ke->context_list_head; aux; aux = aux->context_next) {
+src/libm2skernel/context.c~:450:	for (aux = ke->context_list_head; aux; aux = aux->context_next) {
+src/libm2skernel/context.c~:495:		for (ctx = ke->suspended_list_head; ctx; ctx = ctx->suspended_next) {
+src/libgpudisasm/Makefile:90:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/guestos.c:305:        if (break_point && ke->context_list_head->regs->eip == break_point) {
+src/guestos.c:306:            regs_dump(ke->context_list_head->regs, stdout);
+src/guestos.c:312:        sim_inst += ke->running_count;
+src/guestos.c:313:        if (!ke->context_list_head)
+src/libesim/Makefile:90:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/libdisasm/Makefile:90:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/processor.c:400:		ke->running_max);
+src/processor.c:624:	if (!p_context_switch && ke->context_reschedule) {
+src/processor.c:626:		ke->context_reschedule = 0;
+src/processor.c:632:		(ke->context_reschedule || p->ctx_alloc_oldest + p_context_quantum <= sim_cycle))
+src/processor.c:635:		ke->context_reschedule = 0;
+src/processor.c:667:	while (cycles && ke->context_list_head) {
+src/Makefile:169:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/libmhandle/Makefile:90:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/libgpukernel/Makefile:92:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/guestos.c~:305:        if (break_point && ke->context_list_head->regs->eip == break_point) {
+src/guestos.c~:306:            regs_dump(ke->context_list_head->regs, stdout);
+src/guestos.c~:312:        sim_inst += ke->running_count;
+src/guestos.c~:313:        if (!ke->context_list_head)
+src/libopt/Makefile:90:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/libnetwork/Makefile:90:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/libmisc/Makefile:90:AUTOMAKE = ${SHELL} /home/abhishek/Desktop/cse/year3/sem6/cs377/assignment6/110040067_110040083_lab6/guestos/missing --run automake-1.11
+src/m2s.c:208:	while (ke->finished_count < ke->context_count) {
