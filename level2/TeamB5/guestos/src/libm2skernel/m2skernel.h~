@@ -75,7 +75,7 @@ struct oft
 {
 	struct oft * next;
 	struct oft * prev;
-	char filepath[1000];
+	char filename[20];
 	int process_id;
 	int block_no_of_file_metadata;
 	char access_method;
