@@ -54,8 +54,14 @@ instruction_jump(int block, int byte){
 ///////////////////////////////////////////////
 char * get_current_time()
 {
-	char * temp;
-	return temp;
+	time_t rawtime;
+	struct tm * timeinfo;
+	time(&rawtime);
+	
+	timeinfo = localtime(&rawtime);
+	char * buf;
+	strftime(buf, 15, "%d%m%Y%H%M%S", timeinfo);
+	return buf; 
 }
 
 

@@ -59,9 +59,9 @@ char * get_current_time()
 	time(&rawtime);
 	
 	timeinfo = localtime(&rawtime);
-	char * buf;
+	char  buf[15];
 	strftime(buf, 15, "%d%m%Y%H%M%S", timeinfo);
-	return timeinfo; 
+	return buf; 
 }
 
 
