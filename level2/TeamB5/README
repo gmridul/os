@@ -1,0 +1,22 @@
+
+#####################################
+	Team-ID		B5
+
+Abhishek Gupta		110040067
+Rohan Gyani			110040001
+Mridul Ravi Jain	110040083
+Sahil Jindal 		110020043
+Mridul Garg			110050030
+Divyam Bansal		110050086
+
+
+######################################
+
+Work done:
+
+1. Added the I/O interrupt capability in the simulated machine of Pranali.
+
+2. In Pranali, added the feature to block a process that initiates an I/O
+operation until its I/O operation completes.
+
+
